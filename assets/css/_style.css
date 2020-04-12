@@ -1,0 +1,405 @@
+/* 
+Total duration of this project is 5 days at 'CORONA' virus time 2020. Starting date 8 april and ending data is 12 april.
+1)Universal.
+2)Main.
+3)Cloud and background.
+4)Soil.
+5)Chicken section.
+6)Collision section.
+6)Score section.
+7)Play boutton.
+*/
+/* ---::Universal::--- */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+/* ---::Main::--- */
+body main {
+	width: 1366px;
+	height: 100vh;
+	/*background-color: navy;*/
+}
+
+/* ---::Cloud and background::--- */
+body main #_cloud_And_Bakground {
+	width: 100%;
+	height: 450px;
+	/* background-color: hotpink; */
+}
+
+body main #_cloud_And_Bakground ._blurness_Gradind_Right_And_Left {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: url(/assets/images/_blurness_Right_And_Left.png);
+	z-index: 200;
+}
+
+body main #_cloud_And_Bakground ._cloud {
+	position: absolute;
+	width: 100%;
+	height: 230px;
+	background: linear-gradient(rgba(0, 255, 255, 0.342), white);
+	top: 0px;
+	z-index: 1;
+	overflow: hidden;
+}
+
+body main #_cloud_And_Bakground ._cloud ul li {
+	display: inline-block;
+}
+
+body main #_cloud_And_Bakground ._cloud ul li ._individual_Cloud_One {
+	transform: translate(-650px);
+	animation: _cloud_One 40s infinite ease-in;
+	animation-delay: 6s;
+	margin-top: 30px;
+	opacity: 0.5;
+}
+
+body main #_cloud_And_Bakground ._cloud ul li ._individual_Cloud_Two {
+	transform: translate(-650px);
+	animation: _cloud_Two 40s infinite ease-in;
+	opacity: 0.8;
+}
+
+@keyframes _cloud_One {
+	from {
+		transform: translate(-650px);
+	}
+
+	to {
+		transform: translate(1366px);
+	}
+
+}
+
+@keyframes _cloud_Two {
+	from {
+		transform: translate(-650px);
+	}
+
+	to {
+		transform: translate(1366px);
+	}
+
+}
+body main #_cloud_And_Bakground ._background {
+	position: absolute;
+	width: 100%;
+	height: 300px;
+	top: 150px;
+	/*background-color: red;*/
+	background-image: url(/assets/images/_background.png);
+	background-repeat: round;
+	animation: _soil 0s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+	/*background-position: -9000088px 0;*/
+	filter: blur(7.5px);
+	z-index: 1;
+}
+@keyframes _soil {
+	0% {
+		background-position: 0px 0px;
+	}
+
+	100% {
+		background-position: -1500000px 0px;
+	}
+}
+/* ---::Soil::--- */
+body main #_soil {
+	width: 100%;
+	height: 185px;
+	/*background-color: yellow;*/
+	position: absolute;
+	overflow: hidden;
+}
+body main #_soil ._soil_Background {
+	position: relative;
+	width: 100%;
+	height: 195px;
+	background: url(/assets/images/_soil.png);
+	background-size: cover;
+	top: -30px;
+	transition: 8s ease-in-out;
+	animation: _soil_Background_Move_Right_To_Left 0s infinite;
+}
+@keyframes _soil_Background_Move_Right_To_Left {
+	to {
+		background-position: -1500000px 0px;
+	}
+}
+
+body main #_soil .wave {
+	background: url(/assets/images/_wave.png) rgba(255, 140, 0, 0.1);
+	position: absolute;
+	width: 6400px;
+	height: 400px;
+	animation: wave 10s infinite;
+	background-size: contain;
+	animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+	transition: 2s ease;
+	top: -8px;
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0;
+	}
+
+	100% {
+		margin-left: -1600px;
+	}
+}
+
+/* ---::Chicken section::--- */
+body main ._chicken_Section {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	/*background: url(/assets/images/_chicken.png);*/
+	top: 350px;
+	left: 0px;
+	z-index: 1;
+	transition: 0.2s;
+	/* background: rebeccapurple; */
+}
+body main ._chicken_Section > div {
+	position: absolute;
+}
+body main ._chicken_Section ._chicken_Head {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_chicken_Head.png);
+	/* transform: rotate(8deg); */
+}
+body main ._chicken_Section ._chicken_Back_Far {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_back_Far.png);
+}
+body main ._chicken_Section ._chicken_Body {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_chicken_Body.png);
+}
+body main ._chicken_Section ._chicken_Front_Far {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_fornt_Far.png);
+
+}
+body main ._chicken_Section ._chicken_Eye_White_Dot {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_chicken_Eye.png);
+	animation: _chicken_Eye_Blink 10s infinite;
+	margin-top: 2px;
+	/* transition: 0.100s; */
+}
+@keyframes _chicken_Eye_Blink {
+	0% {
+		transform: translateX(0px);
+	}
+
+	100% {
+		transform: translateX(4px);
+	}
+}
+body main ._chicken_Section ._chicken_Leg_1 {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_chicken_Leg1.png);
+	transform-origin: top;
+	animation: _leg_1 0s infinite;
+}
+body main ._chicken_Section ._chicken_Leg_2 {
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/_chicken_Leg2.png);
+	transform-origin: top;
+	animation: _leg_1 0s infinite;
+}
+
+body main ._chicken_Section ._down_Time_Leg {
+	width: 100%;
+	height: 100%;
+	z-index: -5;
+	animation: _leg_1 0.4s infinite;
+}
+@keyframes _leg_1 {
+	form {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(5.5deg);
+	}
+}
+/* ---::Collision section::--- */
+body main ._collision_Section {
+	position: absolute;
+	width: 100%;
+	height: 520px;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 2;
+	top: 0;
+	overflow: hidden;
+}
+body main ._collision_Section ._cactus_Container {
+	position: absolute;
+	width: 60px;
+	height: 122px;
+	top: 380px;
+	left: 1366px;
+	background: url(/assets/images/_cactus4.png) rgba(102, 51, 153, 0);
+	/* background-size: cover; */
+	animation: _move_Cactus 0s infinite;
+}
+
+body main ._collision_Section ._cactus_Container2 {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	top: 380px;
+	left: 1366px;
+	background: url(/assets/images/_cactus2.png) rgba(255, 0, 119, 0);
+	/* background-size: cover; */
+	animation: _move_Cactus 0s infinite;
+	animation-delay: 8s;
+}
+
+@keyframes _move_Cactus {
+	to {
+		left: -20%;
+	}
+}
+/* ---::Score section::--- */
+body main ._score_Section {
+	position: absolute;
+	top: 50px;
+	z-index: 1;
+	left: -20px;
+	animation: _kite_Flying 5s infinite;
+	transition: 0.100s;
+	font-family: 'Lobster', cursive;
+}
+body main ._score_Section ._score_Bord {
+	width: 400px;
+	height: 110px;
+	background: #000;
+	background: url(/assets/images/_score.png);
+	background-size: cover;
+}
+body main ._score_Section ._score_Bord ._score_Text {
+	position: absolute;
+	/* background-color: #fff; */
+	color: seashell;
+	display: block;
+	margin-left: 80px;
+	margin-top: 30px;
+	width: 135px;
+	font-size: 25px;
+	line-height: 25px;
+}
+body main ._score_Section ._score_Bord #_score {
+	position: absolute;
+	/* background-color: #fff; */
+	color: seashell;
+	display: block;
+	margin-left: 220px;
+	margin-top: 33px;
+	width: 135px;
+	font-size: 25px;
+	line-height: 25px;
+	transition: 0.100s ease-in-out;
+}
+body main ._score_Section ._score_Bord #_compliment {
+	position: absolute;
+	/* background-color: #fff; */
+	color: seashell;
+	display: block;
+	margin-left: 80px;
+	margin-top: 65px;
+	width: 135px;
+	font-size: 25px;
+	line-height: 25px;
+}
+/* ---::Play boutton::--- */
+#_play_Button {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: rgba(34, 192, 195, 0);
+	background: linear-gradient(41deg, rgb(34, 192, 195) 0%, rgb(204, 45, 253) 100%);
+	top: 00px;
+	z-index: 300;	
+}
+body main  #_play_Button h1{
+	position: relative;
+	left: 50%;
+	margin-left: -265px;
+	margin-top: 30px;
+	width: 530px;
+	color: rgb(255, 255, 255);
+	font-family: lobster;
+	font-size: 50px;
+	/* background-color: #fff; */
+}
+body main #_play_Button p{
+	position: relative;
+	left: 50%;
+	margin-left: -254px;
+	width: 600px;
+	background-color: rgba(255, 255, 255, 0);
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: rgb(253, 244, 244);
+}
+body main #_play_Button p a{
+	color: rgb(255, 238, 0);
+}
+body main #_play_Button i{
+	position: relative;
+	left: 50%;
+	display: block;
+	font-size: 300px;
+	margin-top: 30px;
+	background: rgba(163, 131, 131, 0);
+	width: 300px;
+	margin-left: -150px;
+	cursor: pointer;
+}
+body main #_play_Button h6{
+	position: relative;
+	left: 50%;
+	display: block;
+	font-size: 20px;
+	background: rgba(255, 255, 255, 0);
+	width: 480px;
+	margin-left: -240px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+}
+body main #_play_Button ul li{
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-left: 10px;
+	color: rgb(255, 255, 255);
+	letter-spacing: 3px;
+}
+body main #_play_Button ul a{
+	text-decoration: none;
+}
+body main #_play_Button ul li i{
+	font-size: 20px;
+	margin-top: 130px;
+	margin-left: 10px;
+	left: 0;
+	width: 20px;
+	color: rgb(0, 0, 0);
+}
